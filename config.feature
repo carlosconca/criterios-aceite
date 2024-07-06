@@ -23,8 +23,6 @@ Esquema do Cenário: Limite de 10 produtos por venda
 
 # Cenário 3: Botão “limpar” deve voltar ao estado original
 Cenário: Botão "limpar" deve voltar ao estado original
-  Dado que o cliente selecionou cor, tamanho e quantidade
-  E o cliente adicionou produtos ao carrinho
-  Quando o cliente clica no botão "limpar"
-  Então todas as seleções devem ser removidas
-  E a página deve voltar ao estado original
+  Dado que o cliente selecionou cor, tamanho e quantidade e adicionou produtos ao carrinho
+  Quando clicar no botão "limpar"
+  Então todas as seleções devem ser removidas e a página deve voltar ao estado original
