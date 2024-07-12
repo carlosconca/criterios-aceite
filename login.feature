@@ -15,12 +15,12 @@ Esquema do Cenário: Login com dados inválidos
   Então o sistema deve exibir uma mensagem de alerta "Usuário ou senha inválidos"
 
 Cenário 1: Login com dados válidos
-| Tipo de Teste |	    Usuário	      |        Senha	   |   Resultado Esperado                                   |                       
-|    Válido	    |  clienteExistente	|  senhaCorreta123 | 	 Cliente deve ser direcionado para a tela de checkout | 
+| Tipo de Teste |	 Usuário	        |  Senha	         |   Resultado Esperado                                   |                       
+| Válido	      |  clienteExistente	|  senhaCorreta123 | 	 Cliente deve ser direcionado para a tela de checkout | 
 
 Cenário 2: Login com dados inválidos
 Particionamento de Equivalência
-| Tipo de Teste	|     Usuário	       |       Senha	   |  Resultado Esperado                                       |
+| Tipo de Teste	| Usuário	           | Senha	         |  Resultado Esperado                                       |
 | Inválido	    | clienteExistente	 | senhaErrada	   |  Sistema deve exibir mensagem "Usuário ou senha inválidos"| 
 | Inválido	    | clienteInexistente | senhaCorreta123 |  Sistema deve exibir mensagem "Usuário ou senha inválidos"| 
 | Inválido	    | clienteInexistente | senhaErrada	   |  Sistema deve exibir mensagem "Usuário ou senha inválidos"|
