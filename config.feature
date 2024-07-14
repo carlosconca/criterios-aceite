@@ -23,8 +23,8 @@ Esquema do Cenário: Limite de 10 produtos por venda
 
 Exemplo:
 |Tipo de Teste	| Quantidade | Mensagem |  
-|Válido	        | 9 	       | "falta 1 iten para atingir o limite do carrinho" |
-|Válido	        | 10	       | "limite de itens do carrinho foi atingido" |  
+|Válido	        | 9 	     | "falta 1 iten para atingir o limite do carrinho" |
+|Válido	        | 10	     | "limite de itens do carrinho foi atingido" |  
 |Inválido	| 11	     | "Não é possivel inserir mais itens no carrinho"    |
 
 
