@@ -25,7 +25,7 @@ Exemplo:
 |Tipo de Teste	| Quantidade | Mensagem |  
 |Válido	        | 9 	       | Sistema deve exibir mensagem indicando que falta 1 iten para atingir o limite do carrinho |
 |Válido	        | 10	       | Sistema deve exibir mensagem indicando que o limite de 10 produtos por venda foi atingido |  
-|Inválido	   | 11	       | Sistema deve exibir mensagem de erro indicando que o limite é de 10 produtos por venda    |
+|Inválido	 | 11	       | Sistema deve exibir mensagem de erro indicando que o limite é de 10 produtos por venda    |
 
 
 
