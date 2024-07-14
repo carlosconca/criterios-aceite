@@ -10,7 +10,7 @@ Cenário: Seleções de cor, tamanho e quantidade são obrigatórios
   Quando o cliente tenta adicionar um produto ao carrinho sem selecionar <cor>, <tamanho> ou <quantidade>
   Então o sistema deve exibir uma <mensagem> de erro indicando que essas seleções são obrigatórias
   
-Cenário 1: Seleções de cor, tamanho e quantidade são obrigatórios
+Exemplo:
 |Tipo de Teste	| Cor	          | Tamanho	      | Quantidade      | Mensagem | 
 |Inválido	| Não selecionado | P	              | 1	        | seleção de cor obrigatória | 
 |Inválido	| Azul	          | Não selecionado   | 1	        | seleção de tamanho obrigatória | 
@@ -18,10 +18,10 @@ Cenário 1: Seleções de cor, tamanho e quantidade são obrigatórios
 
 # Cenário 2: Limite de 10 produtos por venda
 Esquema do Cenário: Limite de 10 produtos por venda
-  Quando o cliente tenta adicionar mais de 10 produtos ao carrinho
-  Então o sistema deve exibir uma mensagem de erro indicando que o limite é de 10 produtos por venda
+  Quando o cliente tentar adicionar <quantidade> maior que 10 produtos ao carrinho
+  Então o sistema deve exibir uma <mensagem> indicando que o limite são de 10 produtos
 
-Cenário 2: Limite de 10 produtos por venda
+Exemplo:
 |Tipo de Teste	| Quantidade | Resultado Esperado 
 |Válido	        | 9 	       | Sistema deve exibir mensagem indicando que falta 1 iten para atingir o limite do carrinho |
 |Válido	        | 10	       | Sistema deve exibir mensagem indicando que o limite de 10 produtos por venda foi atingido |  
