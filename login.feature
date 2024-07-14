@@ -15,7 +15,7 @@ Esquema do Cenário: Login com dados inválidos
   Então o sistema deve exibir uma <mensagem> de alerta <Usuário> e  <Senha> 
 
 Exemplo:
-|Tipo de Teste | Usuário    | Senha |  Resultado Esperado   |
+|Tipo de Teste  | Usuário      | Senha    |  Resultado Esperado   |
 |Inválido	| "user@ebac" | "12345"  |  "Usuário ou senha inválidos"| 
 |Inválido	| "user#ebac" | "   "    |  "Usuário ou senha inválidos"| 
 |Inválido	|   "     "   | "abc123" |  "Usuário ou senha inválidos"|
