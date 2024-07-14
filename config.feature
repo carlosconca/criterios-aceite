@@ -35,7 +35,5 @@ Cenário: Botão "limpar" deve voltar ao estado original
   Quando clicar no botão "limpar"
   Então todas as seleções devem ser removidas e a página deve voltar ao estado original
 
-Cenário 3: Botão “limpar” deve voltar ao estado original
-| Tipo de Teste	| Cor	  | Tamanho	| Quantidade	| Ação	             |  Resultado Esperado                                                             |                        
-| Válido	      | Azul	| M	      | 2	          | Clicar no "limpar" | 	Todas as seleções devem ser removidas e a página deve voltar ao estado original| 
+
 
