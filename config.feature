@@ -11,10 +11,10 @@ Cenário: Seleções de cor, tamanho e quantidade são obrigatórios
   Então o sistema deve exibir uma <mensagem> de erro indicando que essas seleções são obrigatórias
   
 Cenário 1: Seleções de cor, tamanho e quantidade são obrigatórios
-|Tipo de Teste	| Cor	            | Tamanho	        | Quantidade      | Resultado Esperado | 
-|Inválido	      | Não selecionado | P	              | 1	              | Sistema deve exibir mensagem de erro indicando seleção de cor obrigatória | 
-|Inválido	      | Azul	          | Não selecionado | 1	              | Sistema deve exibir mensagem de erro indicando seleção de tamanho obrigatória | 
-|Inválido	      | Azul	          | P	              | Não selecionado | Sistema deve exibir mensagem de erro indicando seleção de quantidade obrigatória |
+|Tipo de Teste	| Cor	| Tamanho	| Quantidade | Resultado Esperado | 
+|Inválido	  | Não selecionado | P	| 1	| Sistema deve exibir mensagem de erro indicando seleção de cor obrigatória | 
+|Inválido	  | Azul	| Não selecionado | 1	| Sistema deve exibir mensagem de erro indicando seleção de tamanho obrigatória | 
+|Inválido	  | Azul	| P	 | Não selecionado | Sistema deve exibir mensagem de erro indicando seleção de quantidade obrigatória |
 
 # Cenário 2: Limite de 10 produtos por venda
 Esquema do Cenário: Limite de 10 produtos por venda
