@@ -19,5 +19,6 @@ Exemplo:
 |Inválido	| "user@ebac" | "12345"  |  "Usuário ou senha inválidos"| 
 |Inválido	| "user#ebac" | "   "    |  "Usuário ou senha inválidos"| 
 |Inválido	|   "     "   | "abc123" |  "Usuário ou senha inválidos"|
+|Inválido	|   "     "   | "      " |  "Todos os campos devem ser preenchidos"|
 
 
