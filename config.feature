@@ -12,9 +12,9 @@ Cenário: Seleções de cor, tamanho e quantidade são obrigatórios
   
 Exemplo:
 |Tipo de Teste	| Cor	          | Tamanho	      | Quantidade      | Mensagem | 
-|Inválido	| Não selecionado | P	              | 1	        | seleção de cor obrigatória | 
-|Inválido	| Azul	          | Não selecionado   | 1	        | seleção de tamanho obrigatória | 
-|Inválido	| Azul	          | P	              | Não selecionado | seleção de quantidade obrigatória |
+|Inválido	| Não selecionado | P	              | 1	        | "seleção de cor obrigatória" | 
+|Inválido	| Azul	          | Não selecionado   | 1	        | "seleção de tamanho obrigatória" | 
+|Inválido	| Azul	          | P	              | Não selecionado | "seleção de quantidade obrigatória" |
 
 # Cenário 2: Limite de 10 produtos por venda
 Esquema do Cenário: Limite de 10 produtos por venda
@@ -23,9 +23,9 @@ Esquema do Cenário: Limite de 10 produtos por venda
 
 Exemplo:
 |Tipo de Teste	| Quantidade | Mensagem |  
-|Válido	        | 9 	       | Sistema deve exibir mensagem indicando que falta 1 iten para atingir o limite do carrinho |
-|Válido	        | 10	       | Sistema deve exibir mensagem indicando que o limite de 10 produtos por venda foi atingido |  
-|Inválido	| 11	       | Sistema deve exibir mensagem de erro indicando que o limite é de 10 produtos por venda    |
+|Válido	        | 9 	       | "falta 1 iten para atingir o limite do carrinho" |
+|Válido	        | 10	       | "limite de itens do carrinho foi atingido" |  
+|Inválido	| 11	     | "Não é possivel inserir mais itens no carrinho"    |
 
 
 
