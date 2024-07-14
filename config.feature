@@ -12,7 +12,7 @@ Cenário: Seleções de cor, tamanho e quantidade são obrigatórios
   
 Cenário 1: Seleções de cor, tamanho e quantidade são obrigatórios
 |Tipo de Teste	| Cor	          | Tamanho	      | Quantidade      | Resultado Esperado | 
-|Inválido	| Não selecionado | P	              | 1	       | Sistema deve exibir mensagem de erro indicando seleção de cor obrigatória | 
+|Inválido	| Não selecionado | P	              | 1	        | Sistema deve exibir mensagem de erro indicando seleção de cor obrigatória | 
 |Inválido	| Azul	          | Não selecionado   | 1	        | Sistema deve exibir mensagem de erro indicando seleção de tamanho obrigatória | 
 |Inválido	| Azul	          | P	              | Não selecionado | Sistema deve exibir mensagem de erro indicando seleção de quantidade obrigatória |
 
