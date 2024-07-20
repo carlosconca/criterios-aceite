@@ -1,24 +1,39 @@
 #Language: pt
 
+Funcionalidade: Tela de Login
+Como cliente da EBAC-SHOP
+Quero fazer o login (autenticação) na plataforma  
+Para visualizar meus pedidos
+
 # Contexto comum para os cenários
-Contexto: O cliente está na página de login da EBAC-SHOP
-  Dado que o cliente está na página de login da EBAC-SHOP
+Contexto: 
+  Dado que o cliente acesse a páguna de login da EBAC-SHOP
+  
+Cenário: Autenticação válida
+  Quando o cliente dugutar "jose@gmail.com" 
+  E a senha "jose@123" 
+  Então deve exibir a tela de checkout com a mensagem de boas vindas: "Olá José" 
+  
+Cenário: Usuário inexistente
+  Quando o cliente digitar o usuário "j@z3@gmail.com"   
+  E a senha "jose@123" 
+  Então deve exibir uma mensagem de alerta: "Usuário inexistente" 
+  
+Cenário: Usuário com senha inválidos
+  Quando o cliente digitar o usuário "jose@gmail.com"   
+  E a senha "j@z3#321" 
+  Então deve exibir uma mensagem de alerta: "Usuário ou senha inválido" 
 
-# Cenário 1: Login com dados válidos
-Cenário: Login com dados válidos
-  Quando o cliente insere um <usuário> válido e <senha> válida e clica no botão "entrar"
-  Então o cliente deve ser direcionado para a tela de checkout
+Cenário: Autenticação multiplos usuários
+  Quando o cliente dugutar <usuario> 
+  E a <senha>  
+  Então deve exibir <mensagem> de sucesso  
 
-# Cenário 2: Login com dados inválidos
-Esquema do Cenário: Login com dados inválidos
-  Quando o cliente insere um <usuário> ou uma <senha> inválidos e clica no botão "entrar"
-  Então o sistema deve exibir uma <mensagem> de alerta <Usuário> e  <Senha> 
+Exemplos:
+|usuario|Senha|mensagem|
+|"jose@gmail.com"|"jose@123"|"Olá José"| 
+|"joao@gmail.com"|"joao@123"|"Olá João"| 
+|"pedro@gmail.com"|"pedro@123"|"Olá Pedro"|
 
-Exemplo:
-|Tipo de Teste  | Usuário     | Senha    |  Resultado Esperado   |
-|Inválido	| "user@ebac" | "12345"  |  "Usuário ou senha inválidos"| 
-|Inválido	| "user#ebac" | "   "    |  "Usuário ou senha inválidos"| 
-|Inválido	|   "     "   | "abc123" |  "Usuário ou senha inválidos"|
-|Inválido	|   "     "   | "      " |  "Todos os campos devem ser preenchidos"|
 
 
