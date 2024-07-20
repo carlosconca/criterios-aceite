@@ -30,9 +30,9 @@ Cenário: Autenticação multiplos usuários
   Então deve exibir <mensagem> de sucesso  
 
 Exemplos:
-|usuario|Senha|mensagem|
-|"jose@gmail.com"|"jose@123"|"Olá José"| 
-|"joao@gmail.com"|"joao@123"|"Olá João"| 
+|usuario          |Senha      |mensagem   |
+|"jose@gmail.com" |"jose@123" |"Olá José" | 
+|"joao@gmail.com" |"joao@123" |"Olá João" | 
 |"pedro@gmail.com"|"pedro@123"|"Olá Pedro"|
 
 
