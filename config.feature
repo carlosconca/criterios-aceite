@@ -1,39 +1,39 @@
-#Language: pt
+Funcionalidade: Configurar produto
+            Como cliente da EBAC-SHOP
+            Quero configurar meu produto de acordo com meu tamanho e gosto
+            E escolher a quantidade
+            Para depois inserir no carrinho
+
+    Contexto:
+        Dado que estou na página de configuração do produto
+    Esquema do Cenário: Configuração do produco de a cordo com meu gosto e tamanho
+        Quando clico no botão selecionar <opcao>
+        Então o sistema deve manter selecionado <opcao> do produto e com o botão comprar deve ficar destacado
+            
+        Exemplos:
+            | opcao              |
+            | cor                |
+            | tamanho            |
+            | quantidade_produto |
 
 
-# Contexto comum para os cenários
-Contexto: O cliente está na página de seleção de produtos
-  Dado que o cliente está na página de seleção de produtos
+    Esquema do Cenário: Seleção de produtos com tamanho e cor diferentes
+        Quando seleciono uma blusa da cor <cor>, tamanho <tamanho> e adiciono a quantidade <quantidade>           
+        Então o sistema deve acescentar o produto no carrinho
 
-# Cenário 1: Seleções de cor, tamanho e quantidade são obrigatórios
-Cenário: Seleções de cor, tamanho e quantidade são obrigatórios
-  Quando o cliente tenta adicionar um produto ao carrinho sem selecionar <cor>, <tamanho> ou <quantidade>
-  Então o sistema deve exibir uma <mensagem> de erro indicando que essas seleções são obrigatórias
-  
-Exemplo:
-|Tipo de Teste	| Cor	          | Tamanho	      | Quantidade      | Mensagem | 
-|Inválido	| Não selecionado | P	              | 1	        | "seleção de cor obrigatória" | 
-|Inválido	| Azul	          | Não selecionado   | 1	        | "seleção de tamanho obrigatória" | 
-|Inválido	| Azul	          | P	              | Não selecionado | "seleção de quantidade obrigatória" |
+        Exemplos:
+            | cor      | tamanho | quantidade |
+            | azul     | M       | 1          |
+            | azul     | G       | 2          |
+            | azul     | GG      | 3          |
+            | vermelho | M       | 1          |
+            | amarelo  | G       | 2          |
+            | verde    | GG      | 3          |
 
-# Cenário 2: Limite de 10 produtos por venda
-Esquema do Cenário: Limite de 10 produtos por venda
-  Quando o cliente tentar adicionar <quantidade> maior que 10 produtos ao carrinho
-  Então o sistema deve exibir uma <mensagem> indicando que o limite são de 10 produtos
-
-Exemplo:
-|Tipo de Teste	| Quantidade | Mensagem |  
-|Válido	        | 9 	     | "falta 1 iten para atingir o limite do carrinho" |
-|Válido	        | 10	     | "limite de itens do carrinho foi atingido" |  
-|Inválido	| 11	     | "Não é possivel inserir mais itens no carrinho"    |
-
-
-
-# Cenário 3: Botão “limpar” deve voltar ao estado original
-Cenário: Botão "limpar" deve voltar ao estado original
-  Dado que o cliente selecionou cor, tamanho e quantidade e adicionou produtos ao carrinho
-  Quando clicar no botão "limpar"
-  Então todas as seleções devem ser removidas e a página deve voltar ao estado original
+    Cenário: limpar configuração do produto selecionado
+        Quando clico no botão limpar configuração
+        Então o sistema deve limpar a configuração dos produtos 
+           
 
 
 
