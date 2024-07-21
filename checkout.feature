@@ -1,6 +1,6 @@
 #language: pt
 
-Funcionalidade: [US-0003] – Tela de cadastro - Checkout
+Funcionalidade: Tela de cadastro Checkout
     Como cliente da EBAC-SHOP
     Quero fazer concluir meu cadastro
     Para finalizar minha compra
