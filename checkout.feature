@@ -1,21 +1,35 @@
-#Language: pt
+#language: pt
 
-# Contexto comum para os cenários
-Contexto: O cliente está na página de cadastro da EBAC-SHOP
-  Dado que o cliente está na página de cadastro da EBAC-SHOP
+Funcionalidade: [US-0003] – Tela de cadastro - Checkout
+    Como cliente da EBAC-SHOP
+    Quero fazer concluir meu cadastro
+    Para finalizar minha compra
 
-# Cenário 1: Cadastro com todos os dados obrigatórios
-Cenário: Cadastro com todos os dados obrigatórios
-  Quando o cliente preenche todos os campos obrigatórios marcados com asteriscos e clica no botão "concluir cadastro"
-  Então o sistema deve registrar o cadastro do cliente permitindo que este finalize a compra 
 
-# Cenário 2: Cadastro com e-mail inválido
-Cenário: Cadastro com e-mail inválido
-  Quando o cliente preenche todos os campos obrigatórios inserindo um e-mail no formato inválido e clica no botão "concluir cadastro"
-  Então o sistema deve exibir uma mensagem de erro indicando que o formato do e-mail é inválido
+    Contexto:
+        Dado que estou na tela de Checkout
 
-# Cenário 3: Cadastro com campos obrigatórios vazios
-Esquema do Cenário: Cadastro com campos obrigatórios vazios
-  Quando o cliente deixa um ou mais campos obrigatórios vazios e clica no botão "concluir cadastro"
-  Então o sistema deve exibir uma mensagem de alerta indicando que todos os campos obrigatórios devem ser preenchidos
+
+    Esquema do Cenário: Preenchimento dos dados pessoais para faturamento
+        Quando o usuário preencher os dados pessoais com <nome> e <sobrenome>
+            E preencher os campos de endereço com <pais>, <endereco>, <cidade> e <CEP>
+            E preencher os campos para contato com <telefone> e <email>
+        Então ao clicar no botão Finalizar Compra o sistema deve exibir a mensagem <mensagem>
+        Exemplos:
+            | nome | sobrenome | pais   | endereco   | cidade    | CEP       | telefone         | email            | mensagem                                           |
+            | Jose | Carlos    | Brasil | Tv. Baráo  | Belém     | 66083-100 | (91) 98324-3157  | jose@ebac.com.br | Detalhes para faturamento atualizados com sucesso! |
+            |      | Carlos    | Brasil | Tv. Baráo  | Belém     | 66083-100 | (91) 98324-3157  | jose@ebac.com.br | O preenchimento do campo Nome é obrigatório!       |
+            | Jose |           | Brasil | Tv. Baráo  | Belém     | 66083-100 | (91) 98324-3157  | jose@ebac.com.br | O preenchimento do campo Sobrenome é obrigatório!  |
+            | Jose | Carlos    |        | Tv. Baráo  | Belém     | 66083-100 | (91) 98324-3157  | jose@ebac.com.br | O preenchimento do campo País é obrigatório!       |
+            | Jose | Carlos    | Brasil |            | Belém     | 66083-100 | (91) 98324-3127  | jose@ebac.com.br | O preenchimento do campo Endereço é obrigatório!   |
+            | Jose | Carlos    | Brasil | Tv. Baráo  |           | 66083-100 | (91) 98324-3157  | jose@ebac.com.br | O preenchimento do campo Cidade é obrigatório!     |
+            | Jose | Carlos    | Brasil | Tv. Baráo  | Belém     |           | (91) 98324-3157  | jose@ebac.com.br | O preenchimento do campo CEP é obrigatório!        |
+            | Jose | Carlos    | Brasil | Tv. Baráo  | Belém     | 66083-100 |                  | jose@ebac.com.br | O preenchimento do campo Telefone é obrigatório!   |
+            | Jose | Carlos    | Brasil | Tv. Baráo  | Belém     | 66083-100 |                  |                  | O preenchimento do campo E-mail é obrigatório!     |
+            | Jose | Carlos    | Brasil | Tv. Baráo  | Belém     | 66083-100 | (91) 98324-3157  | jose#ebac.com.br | E-mail informado inválido!                         |
+            | Jose | Carlos    | Brasil | Tv. Baráo  | Belém     | 66083-100 | (91) 98324-3157  | @ebac.com.br     | E-mail informado inválido!                         |
+            | Jose | Carlos    | Brasil | Tv. Baráo  | Belém     | 66083-100 | (91) 98324-3157  | jose@ebac        | E-mail informado inválido!                         |
+            | Jose | Carlos    | Brasil | Tv. Baráo  | Belém     | abcdf-abc | (91) 98324-3157  | jose@ebac.com.br | Campo CEP deve conter apenas números!              |
+            | Jose | Carlos    | Brasil | Tv. Baráo  | Belém     | 66083-100 | abcdfegrjvh@jkkl | jose@ebac.com.br | Campo telefone deve conter apenas números!         |
+            | Jose | Carlos    | zzzzdd | Tv. Baráo  | Belém     | 66083-100 | (91) 98324-3157  | jose@ebac.com.br | País informado inválido ou não selecionado!        |
 
