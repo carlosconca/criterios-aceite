@@ -25,7 +25,7 @@ Funcionalidade: Tela de cadastro Checkout
             | Jose | Carlos    | Brasil | Tv. Baráo  |           | 66083-100 | (91) 98324-3157  | jose@ebac.com.br | O preenchimento do campo Cidade é obrigatório!     |
             | Jose | Carlos    | Brasil | Tv. Baráo  | Belém     |           | (91) 98324-3157  | jose@ebac.com.br | O preenchimento do campo CEP é obrigatório!        |
             | Jose | Carlos    | Brasil | Tv. Baráo  | Belém     | 66083-100 |                  | jose@ebac.com.br | O preenchimento do campo Telefone é obrigatório!   |
-            | Jose | Carlos    | Brasil | Tv. Baráo  | Belém     | 66083-100 |                  |                  | O preenchimento do campo E-mail é obrigatório!     |
+            | Jose | Carlos    | Brasil | Tv. Baráo  | Belém     | 66083-100 | (91) 98324-3157  |                  | O preenchimento do campo E-mail é obrigatório!     |
             | Jose | Carlos    | Brasil | Tv. Baráo  | Belém     | 66083-100 | (91) 98324-3157  | jose#ebac.com.br | E-mail informado inválido!                         |
             | Jose | Carlos    | Brasil | Tv. Baráo  | Belém     | 66083-100 | (91) 98324-3157  | @ebac.com.br     | E-mail informado inválido!                         |
             | Jose | Carlos    | Brasil | Tv. Baráo  | Belém     | 66083-100 | (91) 98324-3157  | jose@ebac        | E-mail informado inválido!                         |
